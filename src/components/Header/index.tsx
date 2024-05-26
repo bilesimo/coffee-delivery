@@ -20,6 +20,7 @@ export function Header() {
         <Link to="/checkout">
           <ShoppingCartContainer>
             <ShoppingCart size={22} weight="fill" />
+            <div>2</div>
           </ShoppingCartContainer>
         </Link>
       </RightInfo>

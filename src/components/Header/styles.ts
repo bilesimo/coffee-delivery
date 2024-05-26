@@ -22,6 +22,23 @@ export const ShoppingCartContainer = styled.div`
   align-items: center;
   justify-content: center;
   color: ${(props) => props.theme['yellow-dark']};
+  position: relative;
+
+  div {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: ${(props) => props.theme['yellow-dark']};
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: white;
+    font-weight: 700;
+  }
 `
 
 export const RegionContainer = styled.div`
