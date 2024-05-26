@@ -29,8 +29,8 @@ export const ShoppingCartContainer = styled.div`
     top: -8px;
     right: -8px;
     background: ${(props) => props.theme['yellow-dark']};
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     display: flex;
     align-items: center;
