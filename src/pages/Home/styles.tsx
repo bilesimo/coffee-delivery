@@ -51,27 +51,26 @@ export const ListOfDiffs = styled.ul`
     }
   }
 `
-const IconContainer = styled.div`
+const IconContainerColors = {
+  purple: 'purple',
+  gray: 'base-text',
+  yellow: 'yellow',
+  'yellow-dark': 'yellow-dark',
+}
+
+interface IconContainerProps {
+  color: keyof typeof IconContainerColors
+}
+
+export const IconContainer = styled.div<IconContainerProps>`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-`
 
-export const PurpleContainer = styled(IconContainer)`
-  background-color: ${(props) => props.theme.purple};
-`
-
-export const GrayContainer = styled(IconContainer)`
-  background-color: ${(props) => props.theme['base-text']};
-`
-
-export const YellowContainer = styled(IconContainer)`
-  background-color: ${(props) => props.theme.yellow};
-`
-
-export const YellowDarkContainer = styled(IconContainer)`
-  background-color: ${(props) => props.theme['yellow-dark']};
+  ${(props) => {
+    return `background-color: ${props.theme[IconContainerColors[props.color]]};`
+  }}
 `

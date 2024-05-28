@@ -5,10 +5,7 @@ import {
   InfoRegion,
   Titles,
   ListOfDiffs,
-  PurpleContainer,
-  YellowContainer,
-  GrayContainer,
-  YellowDarkContainer,
+  IconContainer,
 } from './styles'
 import { ListOfCoffees } from './components/ListOfCoffees'
 
@@ -26,27 +23,27 @@ export function Home() {
           </Titles>
           <ListOfDiffs>
             <li>
-              <YellowDarkContainer>
+              <IconContainer color={'yellow-dark'}>
                 <ShoppingCart weight="fill" size={16} color="white" />
-              </YellowDarkContainer>
+              </IconContainer>
               <span>Compra simples e segura</span>
             </li>
             <li>
-              <GrayContainer>
+              <IconContainer color={'gray'}>
                 <Package weight="fill" size={16} color="white" />
-              </GrayContainer>
+              </IconContainer>
               <span>Embalagem mantém o café intacto</span>
             </li>
             <li>
-              <YellowContainer>
+              <IconContainer color={'yellow'}>
                 <Timer weight="fill" size={16} color="white" />
-              </YellowContainer>
+              </IconContainer>
               <span>Entrega rápida e rastrada</span>
             </li>
             <li>
-              <PurpleContainer>
+              <IconContainer color={'purple'}>
                 <Coffee weight="fill" size={16} color="white" />
-              </PurpleContainer>
+              </IconContainer>
               <span>O café chega fresquinho até você</span>
             </li>
           </ListOfDiffs>
