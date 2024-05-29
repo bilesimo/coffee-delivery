@@ -6,7 +6,7 @@ export function ListOfCoffees() {
   return (
     <ListOfCoffeesContainer>
       <h1>Nossos cafés</h1>
-      <div>
+      <section>
         {CoffeeList.map((coffee: CoffeeCardProps) => {
           return (
             <CoffeeCard
@@ -18,7 +18,7 @@ export function ListOfCoffees() {
             />
           )
         })}
-      </div>
+      </section>
     </ListOfCoffeesContainer>
   )
 }
