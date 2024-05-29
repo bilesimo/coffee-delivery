@@ -1,6 +1,6 @@
 export const CoffeeList = [
   {
-    name: 'Expresso',
+    name: 'Expresso Tradicional',
     description: 'O tradicional café feito com água quente e grãos moídos',
     tags: ['Tradicional'],
     price: 9.99,
