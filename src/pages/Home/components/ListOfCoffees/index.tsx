@@ -1,3 +1,24 @@
+import { ListOfCoffeesContainer } from './styles'
+import { CoffeeCard, CoffeeCardProps } from './components/CoffeeCard/index'
+import { CoffeeList } from '../../../../data/listOfCoffees'
+
 export function ListOfCoffees() {
-  return <h1>List Of Coffees</h1>
+  return (
+    <ListOfCoffeesContainer>
+      <h1>Nossos cafés</h1>
+      <div>
+        {CoffeeList.map((coffee: CoffeeCardProps) => {
+          return (
+            <CoffeeCard
+              key={coffee.name}
+              name={coffee.name}
+              description={coffee.description}
+              price={coffee.price}
+              tags={coffee.tags}
+            />
+          )
+        })}
+      </div>
+    </ListOfCoffeesContainer>
+  )
 }
