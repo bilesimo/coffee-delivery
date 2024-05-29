@@ -30,7 +30,7 @@ export function CoffeeCard({
         <Tags>
           {tags.map((tag) => (
             <div key={tag}>
-              <span>{tag}</span>
+              <span>{tag.toUpperCase()}</span>
             </div>
           ))}
         </Tags>

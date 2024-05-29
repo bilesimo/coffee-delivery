@@ -3,11 +3,13 @@ import styled from 'styled-components'
 export const CoffeeCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-color: ${(props) => props.theme['base-card']};
   position: relative;
   margin: 1rem;
   padding: 1rem;
+  width: 16rem;
+  height: 19.5rem;
+  border-radius: 6px 36px 6px 36px;
 
   img {
     width: 120px;
@@ -28,6 +30,15 @@ export const InformationContainer = styled.div`
 export const Tags = styled.div`
   display: flex;
   gap: 0.5rem;
+
+  div {
+    background-color: ${(props) => props.theme['yellow-light']};
+    color: ${(props) => props.theme['yellow-dark']};
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+  }
 `
 
 export const BuyingContainer = styled.div`
