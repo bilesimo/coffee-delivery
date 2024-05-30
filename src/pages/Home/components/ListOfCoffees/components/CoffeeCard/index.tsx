@@ -1,6 +1,7 @@
 import { ShoppingCart } from 'phosphor-react'
 import {
   BuyingContainer,
+  BuyingSection,
   CoffeeCardContainer,
   Tags,
   InformationContainer,
@@ -26,30 +27,32 @@ export function CoffeeCard({
   return (
     <CoffeeCardContainer>
       <img src={getCoffeeImage(name)} alt=""></img>
+      <Tags>
+        {tags.map((tag) => (
+          <div key={tag}>
+            <span>{tag.toUpperCase()}</span>
+          </div>
+        ))}
+      </Tags>
       <InformationContainer>
-        <Tags>
-          {tags.map((tag) => (
-            <div key={tag}>
-              <span>{tag.toUpperCase()}</span>
-            </div>
-          ))}
-        </Tags>
         <h2>{name}</h2>
         <p>{description}</p>
       </InformationContainer>
       <BuyingContainer>
         <Price>
           <span>R$</span>
-          <strong>{price}</strong>
+          <span>{price}</span>
         </Price>
-        <Quantity>
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
-        </Quantity>
-        <ShoppingButton>
-          <ShoppingCart weight="fill" size={16} color="white" />
-        </ShoppingButton>
+        <BuyingSection>
+          <Quantity>
+            <button>-</button>
+            <span>1</span>
+            <button>+</button>
+          </Quantity>
+          <ShoppingButton>
+            <ShoppingCart weight="fill" size={16} color="white" />
+          </ShoppingButton>
+        </BuyingSection>
       </BuyingContainer>
     </CoffeeCardContainer>
   )
