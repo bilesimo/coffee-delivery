@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ShoppingCart } from 'phosphor-react'
 import {
   BuyingContainer,
@@ -24,6 +25,8 @@ export function CoffeeCard({
   description,
   price,
 }: CoffeeCardProps) {
+  const [quantity, setQuantity] = useState(1)
+
   return (
     <CoffeeCardContainer>
       <img src={getCoffeeImage(name)} alt=""></img>
@@ -45,12 +48,12 @@ export function CoffeeCard({
         </Price>
         <BuyingSection>
           <Quantity>
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
+            <button onClick={() => setQuantity((prev) => prev - 1)}>-</button>
+            <span>{quantity}</span>
+            <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
           </Quantity>
-          <ShoppingButton>
-            <ShoppingCart weight="fill" size={16} color="white" />
+          <ShoppingButton onClick={() => console.log('a')}>
+            <ShoppingCart weight="fill" size={22} color="white" />
           </ShoppingButton>
         </BuyingSection>
       </BuyingContainer>

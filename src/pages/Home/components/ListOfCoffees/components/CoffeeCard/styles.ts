@@ -111,15 +111,31 @@ export const Quantity = styled.div`
     font-weight: bold;
     font-family: 'Baloo 2', sans-serif;
   }
+
+  button:focus {
+    outline: none;
+  }
+
+  button:hover {
+    cursor: pointer;
+    transform: scale(1.4);
+    transition: 0.2s;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
 `
 export const ShoppingButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-color: ${(props) => props.theme.purple};
+  background-color: ${(props) => props.theme['purple-dark']};
   border-radius: 6px;
 
   width: 2.25rem;
   height: 2.25rem;
+
+  border: 0;
 `
