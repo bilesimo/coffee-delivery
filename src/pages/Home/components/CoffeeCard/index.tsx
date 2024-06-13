@@ -25,7 +25,7 @@ export function CoffeeCard({
   description,
   price,
 }: CoffeeCardProps) {
-  const [quantity, setQuantity] = useState(1)
+  const [quantity, setQuantity] = useState(0)
 
   return (
     <CoffeeCardContainer>
