@@ -1,4 +1,11 @@
+import { useContext } from 'react'
+import { SelectedCoffeesContext } from '../../context/SelectedCoffeesContext'
+
 export function Checkout() {
+  const { selectedCoffees } = useContext(SelectedCoffeesContext)
+
+  console.log(selectedCoffees)
+
   return (
     <main>
       <section>
