@@ -11,7 +11,9 @@ import {
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={logoCoffeeDelivery} height={40} alt="" />
+      <Link to="/">
+        <img src={logoCoffeeDelivery} height={40} alt="" />
+      </Link>
       <RightInfo>
         <RegionContainer>
           <MapPin size={22} weight="fill" />

@@ -1,5 +1,5 @@
 import { ListOfCoffeesContainer } from './styles'
-import { CoffeeCard, CoffeeCardProps } from './components/CoffeeCard/index'
+import { CoffeeCard, CoffeeCardProps } from '../CoffeeCard/index'
 import { CoffeeList } from '../../../../data/listOfCoffees'
 
 export function ListOfCoffees() {

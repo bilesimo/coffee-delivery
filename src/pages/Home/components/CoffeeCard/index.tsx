@@ -10,7 +10,7 @@ import {
   Quantity,
   ShoppingButton,
 } from './styles'
-import { getCoffeeImage } from '../../../../../../utils/getCoffeeImage'
+import { getCoffeeImage } from '../../../../utils/getCoffeeImage'
 
 export type CoffeeCardProps = {
   tags: string[]
@@ -44,7 +44,7 @@ export function CoffeeCard({
       <BuyingContainer>
         <Price>
           <span>R$</span>
-          <span>{price}</span>
+          <span>{price.toFixed(2)}</span>
         </Price>
         <BuyingSection>
           <Quantity>
