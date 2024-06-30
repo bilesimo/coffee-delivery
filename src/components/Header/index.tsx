@@ -7,8 +7,12 @@ import {
   ShoppingCartContainer,
   RegionContainer,
 } from './styles'
+import { useContext } from 'react'
+import { SelectedCoffeesContext } from '../../context/SelectedCoffeesContext'
 
 export function Header() {
+  const { selectedCoffees } = useContext(SelectedCoffeesContext)
+
   return (
     <HeaderContainer>
       <Link to="/">
@@ -22,7 +26,7 @@ export function Header() {
         <Link to="/checkout">
           <ShoppingCartContainer>
             <ShoppingCart size={22} weight="fill" />
-            <div>2</div>
+            <div>{selectedCoffees.length}</div>
           </ShoppingCartContainer>
         </Link>
       </RightInfo>
