@@ -5,20 +5,16 @@ export enum ActionTypes {
   DECREASE_QUANTITY = 'DECREASE_QUANTITY',
 }
 
-export function increaseQuantity(item: StateItemType) {
+export function increaseQuantityAction(item: StateItemType) {
   return {
     type: ActionTypes.INCREASE_QUANTITY,
-    payload: {
-      item,
-    },
+    payload: item,
   }
 }
 
-export function decreaseQuantity(item: StateItemType) {
+export function decreaseQuantityAction(item: StateItemType) {
   return {
     type: ActionTypes.DECREASE_QUANTITY,
-    payload: {
-      item,
-    },
+    payload: item,
   }
 }
