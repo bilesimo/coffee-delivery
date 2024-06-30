@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 import { ShoppingCart } from 'phosphor-react'
 import {
   BuyingContainer,
@@ -10,6 +10,7 @@ import {
   Quantity,
   ShoppingButton,
 } from './styles'
+import { SelectedCoffeesContext } from '../../../../context/SelectedCoffeesContext'
 import { getCoffeeImage } from '../../../../utils/getCoffeeImage'
 
 export type CoffeeCardProps = {
@@ -25,7 +26,9 @@ export function CoffeeCard({
   description,
   price,
 }: CoffeeCardProps) {
-  const [quantity, setQuantity] = useState(0)
+  const { selectedCoffees, addNewCoffee, removeCoffee } = useContext(
+    SelectedCoffeesContext,
+  )
 
   return (
     <CoffeeCardContainer>
@@ -48,11 +51,26 @@ export function CoffeeCard({
         </Price>
         <BuyingSection>
           <Quantity>
-            <button onClick={() => setQuantity((prev) => prev - 1)}>-</button>
-            <span>{quantity}</span>
-            <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
+            <button onClick={() => removeCoffee({ name, price, quantity: 1 })}>
+              -
+            </button>
+            <span>
+              {selectedCoffees.find((item) => item.name === name)?.quantity ||
+                0}
+            </span>
+            <button
+              onClick={() =>
+                addNewCoffee({
+                  name,
+                  price,
+                  quantity: 1,
+                })
+              }
+            >
+              +
+            </button>
           </Quantity>
-          <ShoppingButton onClick={() => console.log('a')}>
+          <ShoppingButton>
             <ShoppingCart weight="fill" size={22} color="white" />
           </ShoppingButton>
         </BuyingSection>
